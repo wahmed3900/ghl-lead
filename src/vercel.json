@@ -1,0 +1,19 @@
+@"
+{
+  "builds": [
+    {
+      "src": "ghl-lead-generator/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/ghl-lead-generator/$1"
+    }
+  ]
+}
+"@ | Out-File -FilePath "vercel.json" -Encoding utf8
+
+# Verify it was created
+Get-Content vercel.json
