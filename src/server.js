@@ -47,7 +47,15 @@ const LeadSchema = new mongoose.Schema({
 });
 
 const Lead = mongoose.model('Lead', LeadSchema);
+// ============================================================
+// BOT SYSTEM
+// ============================================================
+const leadCaptureBot = require('./bots/Mongoos');
+const ghlSyncBot = require('./bots/Push to GH Bot');
+const reminderBot = require('./bots/reminder bot');
+const scrapBot = require('./bots/scrap');
 
+console.log('🤖 Bot system initialized');
 // ============================================================
 // ROUTES
 // ============================================================
