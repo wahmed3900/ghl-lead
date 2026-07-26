@@ -99,7 +99,7 @@ app.get('/api/leads/:id', async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
-
+// Fresh deployment - fix 404
 // Update a lead
 app.put('/api/leads/:id', async (req, res) => {
   try {
